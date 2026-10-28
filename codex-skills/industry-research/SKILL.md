@@ -259,7 +259,7 @@ This skill is generated from `skills/industry-research.md` so Claude Code and Co
 3. 产业链全景图用代码块的文本图表示
 4. 每个环节至少分析2-3家头部公司
 5. 全球公司扫描要尽可能完整（A股/港股/美股/国际）
-6. 最终将完整报告写入 `~/[行业名]产业链投资研究报告.md`
+6. 将行业视为投资标的：从当前仓库根目录计算一次 `REPORT_DIR="reports/{安全化行业名}"` 和 `REPORT_PATH="$REPORT_DIR/{安全化行业名}-industry-{YYYYMMDD}.md"`，先执行 `mkdir -p "$REPORT_DIR"`，再写入 `"$REPORT_PATH"`。行业名保留中文，但须去除首尾空白，将 `/`、`\` 和连续空白替换为 `-`，并拒绝空值、绝对路径、`.`、`..` 和任何目录穿越；不得写入 `~/`、`$HOME`、仓库外路径或 `reports/` 根目录
 7. 结论要明确，给出具体的标的、仓位和价格区间建议
 8. 每个分析模块末尾有对应大师的"追问"
 
@@ -270,14 +270,14 @@ This skill is generated from `skills/industry-research.md` so Claude Code and Co
 ```bash
 # Step 1 — 提取抽检清单（15%随机抽样）
 python3 tools/report_audit.py extract \
-  --report <报告文件路径>
+  --report "$REPORT_PATH"
 
 # Step 2 — 对清单每项从可靠信源取数（参见 skills/financial-data.md）
 
 # Step 3 — 输出准出/打回判决
 python3 tools/report_audit.py verdict \
   --results '<填好的JSON>' \
-  --report <报告文件名>
+  --report "$REPORT_PATH"
 ```
 
 **【准出】** 全部通过 → 报告可发布；**【打回】** 有不通过 → 修正后重审。

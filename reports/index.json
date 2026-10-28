@@ -1,8 +1,63 @@
 {
-  "count": 2477,
-  "published": 2268,
+  "count": 2502,
+  "published": 2293,
   "drafts": 209,
   "reports": [
+    {
+      "title": "腾讯控股（00700.HK）投资研究报告",
+      "path": "reports/腾讯/腾讯投资研究报告-workbuddy-20261027.md",
+      "bucket": "公司",
+      "group": "腾讯",
+      "series": "",
+      "type": "研究",
+      "date": "2026-10-27",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "腾讯与快手估值及三年、十年回报研究报告",
+      "path": "reports/腾讯快手比较/估值-20261025/腾讯与快手估值及三年十年回报研究报告-20261025.md",
+      "bucket": "公司",
+      "group": "腾讯快手比较",
+      "series": "估值-20261025",
+      "type": "估值仓位",
+      "date": "2026-10-25",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "腾讯估值证据与经营分析底稿",
+      "path": "reports/腾讯快手比较/估值-20261025/tencent_research.md",
+      "bucket": "公司",
+      "group": "腾讯快手比较",
+      "series": "估值-20261025",
+      "type": "估值仓位",
+      "date": "2026-10-25",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "快手估值研究底稿：低利润倍数背后的现金消耗与可灵归属",
+      "path": "reports/腾讯快手比较/估值-20261025/kuaishou_research.md",
+      "bucket": "公司",
+      "group": "腾讯快手比较",
+      "series": "估值-20261025",
+      "type": "估值仓位",
+      "date": "2026-10-25",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "腾讯与快手估值：独立反证与模型复核",
+      "path": "reports/腾讯快手比较/估值-20261025/independent_review.md",
+      "bucket": "公司",
+      "group": "腾讯快手比较",
+      "series": "估值-20261025",
+      "type": "估值仓位",
+      "date": "2026-10-25",
+      "date_source": "文件名",
+      "ticker": ""
+    },
     {
       "title": "恒生科技与纳斯达克估值对比研究报告",
       "path": "reports/恒生科技/恒生科技与纳斯达克估值对比-20261024.md",
@@ -4294,6 +4349,17 @@
       "ticker": ""
     },
     {
+      "title": "招商银行、建设银行、中信银行投资比较报告",
+      "path": "reports/银行股/招商银行-建设银行-中信银行投资比较-20260801.md",
+      "bucket": "专题",
+      "group": "银行股",
+      "series": "",
+      "type": "研究",
+      "date": "2026-08-01",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
       "title": "07 增量更新底稿（2026-07-14 → 2026-08-01）",
       "path": "reports/英伟达/《看懂英伟达》-20260801/research/07-增量更新-20260801.md",
       "bucket": "公司",
@@ -4437,6 +4503,17 @@
       "ticker": ""
     },
     {
+      "title": "CITIC Bank income-investment report",
+      "path": "reports/citic-income-investment-20260801.md",
+      "bucket": "专题",
+      "group": "综合与横评",
+      "series": "",
+      "type": "研究",
+      "date": "2026-08-01",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
       "title": "\"一年瓦解CUDA\"？3.4万字纪要和代码，我都查了一遍",
       "path": "reports/AI产业研究/公众号-梁文锋CUDA护城河核查-20260801.md",
       "bucket": "专题",
@@ -4448,6 +4525,61 @@
       "ticker": ""
     },
     {
+      "title": "黄金投资研究报告：保险，不是复利发动机",
+      "path": "reports/黄金/黄金-investment-team-20260731.md",
+      "bucket": "公司",
+      "group": "黄金",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-31",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "招商银行（600036.SH / 3968.HK）投资研究报告",
+      "path": "reports/招商银行/招商银行投资研究报告_20260731.md",
+      "bucket": "公司",
+      "group": "招商银行",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-31",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "中国建设银行投资研究报告",
+      "path": "reports/建设银行/建设银行投资研究报告_20260731.md",
+      "bucket": "公司",
+      "group": "建设银行",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-31",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "中信银行集团投资研究报告",
+      "path": "reports/中信银行/中信银行投资研究报告_20260731.md",
+      "bucket": "公司",
+      "group": "中信银行",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-31",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "VOO（Vanguard S&P 500 ETF）投资研究报告",
+      "path": "reports/VOO/VOO投资研究报告_20260731.md",
+      "bucket": "公司",
+      "group": "VOO",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-31",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
       "title": "MiniMax（稀宇科技，00100.HK）投资研究报告",
       "path": "reports/MINIMAX/MiniMax投资研究报告_20260731.md",
       "bucket": "公司",
@@ -4455,6 +4587,61 @@
       "series": "",
       "type": "研究",
       "date": "2026-07-31",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "黄金资产研究报告",
+      "path": "reports/黄金/黄金-资产研究-20260730.md",
+      "bucket": "公司",
+      "group": "黄金",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "黄金长期投资论文",
+      "path": "reports/黄金/黄金-thesis.md",
+      "bucket": "公司",
+      "group": "黄金",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "正文",
+      "ticker": ""
+    },
+    {
+      "title": "NVIDIA（NASDAQ: NVDA）综合投资研究报告",
+      "path": "reports/英伟达/英伟达投资研究报告_20260730.md",
+      "bucket": "公司",
+      "group": "英伟达",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "英伟达长期投资论文",
+      "path": "reports/英伟达/英伟达-thesis.md",
+      "bucket": "公司",
+      "group": "英伟达",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "正文",
+      "ticker": ""
+    },
+    {
+      "title": "英伟达 / NVIDIA 最新投资研究",
+      "path": "reports/英伟达/英伟达-research-20260730.md",
+      "bucket": "公司",
+      "group": "英伟达",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
       "date_source": "文件名",
       "ticker": ""
     },
@@ -4529,6 +4716,94 @@
       "path": "reports/存储/SK海力士-投资研究报告-20260730.md",
       "bucket": "专题",
       "group": "存储",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "SK 海力士长期投资论文",
+      "path": "reports/SK海力士/SK海力士-thesis.md",
+      "bucket": "公司",
+      "group": "SK海力士",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "正文",
+      "ticker": ""
+    },
+    {
+      "title": "SK 海力士最新投资研究",
+      "path": "reports/SK海力士/SK海力士-research-20260730.md",
+      "bucket": "公司",
+      "group": "SK海力士",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "Rocket Lab / RKLB 长期投资论文",
+      "path": "reports/RKLB/RKLB-thesis.md",
+      "bucket": "公司",
+      "group": "RKLB",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "正文",
+      "ticker": ""
+    },
+    {
+      "title": "Rocket Lab / RKLB 最新投资研究",
+      "path": "reports/RKLB/RKLB-research-20260730.md",
+      "bucket": "公司",
+      "group": "RKLB",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "Rocket Lab USA（RKLB）投资研究报告",
+      "path": "reports/RKLB/RKLB-investment-research-20260730.md",
+      "bucket": "公司",
+      "group": "RKLB",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "QQQ（Invesco QQQ Trust）投资研究报告",
+      "path": "reports/QQQ/QQQ投资研究报告_20260730.md",
+      "bucket": "公司",
+      "group": "QQQ",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "文件名",
+      "ticker": ""
+    },
+    {
+      "title": "QQQ 长期投资论文",
+      "path": "reports/QQQ/QQQ-thesis.md",
+      "bucket": "公司",
+      "group": "QQQ",
+      "series": "",
+      "type": "研究",
+      "date": "2026-07-30",
+      "date_source": "正文",
+      "ticker": ""
+    },
+    {
+      "title": "QQQ / Nasdaq-100 最新研究报告",
+      "path": "reports/QQQ/QQQ-research-20260730.md",
+      "bucket": "公司",
+      "group": "QQQ",
       "series": "",
       "type": "研究",
       "date": "2026-07-30",

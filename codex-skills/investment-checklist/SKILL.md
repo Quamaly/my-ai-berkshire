@@ -235,7 +235,7 @@ python3 tools/financial_rigor.py three-scenario \
 - ❓ **灰色地带** — 说明关键争议点是什么，投资者需要自行判断什么
 - N/A — 未上市/无法买入
 
-将完整报告写入 `~/巴菲特Checklist-[公司名或"多公司对比"].md`
+从当前仓库根目录计算一次 `REPORT_DIR="reports/{安全化公司名或比较标的名}"` 和 `REPORT_PATH="$REPORT_DIR/{安全化标的名}-checklist-{YYYYMMDD}.md"`，先执行 `mkdir -p "$REPORT_DIR"`，再将完整报告写入 `"$REPORT_PATH"`。单公司 Checklist 使用该公司目录；多公司比较使用可读的比较名称，没有自然名称时使用 `reports/多公司对比/`。标的名须去除首尾空白，将 `/`、`\` 和连续空白替换为 `-`，拒绝空值、绝对路径、`.`、`..` 和目录穿越；不得写入 `~/`、`$HOME` 或仓库外路径
 
 ## 输出格式要求
 

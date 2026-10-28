@@ -16,7 +16,7 @@ assets/          — 图片等静态资源
 
 ## 报告目录结构
 
-所有报告按**公司名**建文件夹，公司相关的所有报告放在对应文件夹内：
+所有单一公司、行业、主题或其他投资标的报告都按**投资标的名**建文件夹，相关报告放在对应文件夹内。报告路径必须位于当前仓库的 `reports/<安全化标的名>/`：标的名保留中文，但将 `/`、`\` 和连续空白替换为 `-`，拒绝空值、绝对路径、`.`、`..` 和目录穿越。不得将报告写入 `~/`、`$HOME`、仓库外路径或直接散落在 `reports/` 根目录；组合总览等无单一标的的全局产物除外。
 
 ```
 reports/
@@ -30,11 +30,15 @@ reports/
 │   └── 腾讯-thesis.md
 ├── 拼多多/                  — 拼多多所有研究报告
 ├── 泡泡玛特/                — 泡泡玛特所有研究报告
-├── 核电-industry-20260409.md — 行业报告放根目录
-├── AI算力-funnel-20260509.md  — 漏斗筛选报告放根目录
-├── AI-轮动判断-20260509.md    — 主题级综合判断报告放根目录
-├── portfolio-latest.md       — 组合报告放根目录
-└── 多公司对比-checklist-20260408.md — 多公司报告放根目录
+├── 核电/                    — 行业报告按行业标的建目录
+│   └── 核电-industry-20260409.md
+├── AI算力/                  — 主题/产业链漏斗按标的建目录
+│   └── AI算力-funnel-20260509.md
+├── AI-轮动判断/             — 主题级综合判断按标的建目录
+│   └── AI-轮动判断-20260509.md
+├── portfolio-latest.md       — 组合级全局报告例外
+└── 多公司对比/               — 多公司比较 Checklist
+    └── 多公司对比-checklist-20260408.md
 ```
 
 ## 报告命名规范
@@ -44,14 +48,14 @@ reports/
 | /investment-team | `{公司名}/` 目录内含4个视角+最终报告 | `reports/拼多多/最终报告.md` |
 | /investment-research | `{公司名}-research-{YYYYMMDD}.md` | `reports/腾讯/腾讯-research-20260408.md` |
 | /investment-checklist | `{公司名}-checklist-{YYYYMMDD}.md` | `reports/腾讯/腾讯-checklist-20260408.md` |
-| /industry-research | `{行业名}-industry-{YYYYMMDD}.md`（根目录） | `reports/核电-industry-20260409.md` |
-| /industry-funnel | `{行业名}-funnel-{YYYYMMDD}.md`（根目录） | `reports/AI算力-funnel-20260509.md` |
+| /industry-research | `{行业名}/` 目录内 `{行业名}-industry-{YYYYMMDD}.md` | `reports/核电/核电-industry-20260409.md` |
+| /industry-funnel | `{行业名}/` 目录内 `{行业名}-funnel-{YYYYMMDD}.md` | `reports/AI算力/AI算力-funnel-20260509.md` |
 | /private-company-research | `{公司名}-private-{YYYYMMDD}.md` | `reports/字节跳动/字节跳动-private-20260408.md` |
-| /earnings-review | `{公司名}-earnings-{期间}.md` | `reports/腾讯/腾讯-earnings-2025Q4.md` |
+| /earnings-review | `{公司名}/` 目录内 `{公司名}-earnings-{期间}.md` | `reports/腾讯/腾讯-earnings-2025Q4.md` |
 | /earnings-team | `{公司名}/` 目录内含4个大师视角+研究底稿+公众号文章+读者评审 | `reports/腾讯/腾讯-earnings-2025Q4.md`（公众号定稿） |
-| /thesis-tracker | `{公司名}-thesis.md`（长期维护） | `reports/腾讯/腾讯-thesis.md` |
+| /thesis-tracker | `{公司名}/` 目录内 `{公司名}-thesis.md`（长期维护） | `reports/腾讯/腾讯-thesis.md` |
 | /portfolio-review | `portfolio-latest.md`（根目录，持续更新） | `reports/portfolio-latest.md` |
-| /management-deep-dive | `{公司名}-management-{YYYYMMDD}.md` | `reports/腾讯/腾讯-management-20260409.md` |
+| /management-deep-dive | `{公司名}/` 目录内 `{公司名}-management-{YYYYMMDD}.md` | `reports/腾讯/腾讯-management-20260409.md` |
 
 ## /investment-team 文件结构
 

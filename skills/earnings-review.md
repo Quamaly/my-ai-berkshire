@@ -188,7 +188,7 @@ python3 tools/financial_rigor.py verify-valuation \
 
 ### 第七步：保存报告
 
-将报告写入 `reports/{公司名}-earnings-{期间}.md`，例如 `reports/腾讯-earnings-2025Q4.md`
+从当前仓库根目录计算一次 `REPORT_DIR="reports/{安全化公司名}"` 和 `REPORT_PATH="$REPORT_DIR/{安全化公司名}-earnings-{期间}.md"`，先执行 `mkdir -p "$REPORT_DIR"`，再写入 `"$REPORT_PATH"`。公司名须将 `/`、`\` 和连续空白替换为 `-`，拒绝绝对路径、`.`、`..` 和目录穿越；不得写入 Home 或 `reports/` 根目录。例如：`reports/腾讯/腾讯-earnings-2025Q4.md`
 
 ### 第八步：数据抽检（准出流程）
 
@@ -197,7 +197,7 @@ python3 tools/financial_rigor.py verify-valuation \
 ```bash
 # Step 1 — 提取抽检清单
 python3 tools/report_audit.py extract \
-  --report reports/{公司名}-earnings-{期间}.md
+  --report "$REPORT_PATH"
 
 # Step 2 — 对清单每项从可靠信源取数（参见 skills/financial-data.md）
 

@@ -284,7 +284,7 @@ AI无法和管理层面对面交流，但可以通过公开渠道的侧面信息
 
 ### 第九步：保存报告
 
-将报告写入 `reports/{公司名}-management-{YYYYMMDD}.md`，例如 `reports/美团-management-20260409.md`
+从当前仓库根目录计算一次 `REPORT_DIR="reports/{安全化公司名}"` 和 `REPORT_PATH="$REPORT_DIR/{安全化公司名}-management-{YYYYMMDD}.md"`，先执行 `mkdir -p "$REPORT_DIR"`，再写入 `"$REPORT_PATH"`。公司名须将 `/`、`\` 和连续空白替换为 `-`，拒绝绝对路径、`.`、`..` 和目录穿越；不得写入 Home 或 `reports/` 根目录。例如：`reports/美团/美团-management-20260409.md`
 
 ---
 

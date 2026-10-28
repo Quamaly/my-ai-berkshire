@@ -174,14 +174,14 @@ Use these headings exactly once and avoid repeating the same analysis:
 17. One-sentence conclusion
 18. Sources and data quality
 
-Save the result to `reports/{company}-income-investment-{YYYYMMDD}.md`, using a filesystem-safe company identifier. Include the scorecard and blocking-gate result in section 2, the monthly income calendar in section 11 when calculable, and source title, issuer/publisher, publication date, accessed date, reporting period, URL, and primary/secondary label in section 18.
+Save the result under the repository-local target directory `reports/{safe_company}/`: compute `REPORT_DIR="reports/{safe_company}"` and `REPORT_PATH="$REPORT_DIR/{safe_company}-income-investment-{YYYYMMDD}.md"` once, run `mkdir -p "$REPORT_DIR"`, then write to `"$REPORT_PATH"`. The identifier must replace `/`, `\`, and repeated whitespace with `-`, and reject empty values, absolute paths, `.`, `..`, and traversal; never write to `~`, `$HOME`, or the `reports/` root. Include the scorecard and blocking-gate result in section 2, the monthly income calendar in section 11 when calculable, and source title, issuer/publisher, publication date, accessed date, reporting period, URL, and primary/secondary label in section 18.
 
 ## Release Audit
 
 ```bash
-python3 tools/report_audit.py extract --report reports/{company}-income-investment-{YYYYMMDD}.md
+python3 tools/report_audit.py extract --report "$REPORT_PATH"
 # Verify every extracted item against reliable sources, then:
-python3 tools/report_audit.py verdict --results '<verified JSON>' --report {company}-income-investment-{YYYYMMDD}.md
+python3 tools/report_audit.py verdict --results '<verified JSON>' --report "$REPORT_PATH"
 ```
 
 Fix failed items and repeat the audit. Clearly retain unresolved gaps and lower confidence rather than filling them with assumptions.

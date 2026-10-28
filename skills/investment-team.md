@@ -194,21 +194,31 @@
 
 ### 第八步：保存报告
 
-将完整最终报告写入 `~/{公司名}投资研究报告_{日期}.md`（日期格式 YYYYMMDD）。
+从当前仓库根目录统一计算报告目录和路径，不得写入 `~/`、`$HOME` 或仓库外路径：
+
+```bash
+# 将公司名安全化：去除首尾空白，将 /、\ 和连续空白替换为 -；
+# 拒绝空值、绝对路径、.、.. 和任何目录穿越。
+REPORT_DIR="reports/{安全化公司名}"
+REPORT_PATH="$REPORT_DIR/最终报告.md"
+mkdir -p "$REPORT_DIR"
+```
+
+团队的 `README.md`、四个视角报告和 `最终报告.md` 必须全部写入同一个 `REPORT_DIR`，不得由子 Agent 回退到 Home。已有同名目录可复用，但不得删除或覆盖无关文件。
 
 ### 第九步：数据抽检（准出流程）
 
 ```bash
 # Step 1 — 提取抽检清单（15%随机抽样）
 python3 tools/report_audit.py extract \
-  --report <报告文件路径>
+  --report "$REPORT_PATH"
 
 # Step 2 — 对清单每项从可靠信源取数（参见 skills/financial-data.md）
 
 # Step 3 — 输出准出/打回判决
 python3 tools/report_audit.py verdict \
   --results '<填好的JSON>' \
-  --report <报告文件名>
+  --report "$REPORT_PATH"
 ```
 
 **【准出】** 全部通过 → 报告可发布；**【打回】** 有不通过 → 修正后重审。

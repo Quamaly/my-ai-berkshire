@@ -331,7 +331,7 @@ python3 tools/terminal_value.py irr \
 1. 所有分析必须有数据支撑，附数据来源
 2. 使用 Markdown 表格呈现关键数据
 3. 每个模块末尾必须有对应大师的"追问"
-4. 最终将完整报告写入 `~/[公司名]投资研究报告.md`
+4. 从当前仓库根目录计算一次 `REPORT_DIR="reports/{安全化公司名}"` 和 `REPORT_PATH="$REPORT_DIR/{安全化公司名}-research-{YYYYMMDD}.md"`，先执行 `mkdir -p "$REPORT_DIR"`，再将完整报告写入 `"$REPORT_PATH"`。公司名保留中文，但须去除首尾空白，将 `/`、`\` 和连续空白替换为 `-`，并拒绝空值、绝对路径、`.`、`..` 和任何目录穿越；不得写入 `~/`、`$HOME` 或仓库外路径
 5. 结论要明确，不回避给出买入/观望/回避的建议
 6. 估值部分必须给出具体的价格区间
 7. **报告开头**必须包含"信息丰富度评级"（A/B/C）和"AI研究局限性声明"
@@ -345,7 +345,7 @@ python3 tools/terminal_value.py irr \
 **Step 1 — 提取抽检清单（15%随机抽样）：**
 ```bash
 python3 tools/report_audit.py extract \
-  --report <报告文件路径>
+  --report "$REPORT_PATH"
 ```
 输出 JSON 模板，每项含 `fetched_value`（待填）。
 
@@ -358,7 +358,7 @@ python3 tools/report_audit.py extract \
 ```bash
 python3 tools/report_audit.py verdict \
   --results '<填好的JSON>' \
-  --report <报告文件名>
+  --report "$REPORT_PATH"
 ```
 
 - **【准出】**：所有抽检点偏差 ≤ 1% → 报告可发布

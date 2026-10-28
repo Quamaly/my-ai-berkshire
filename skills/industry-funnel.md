@@ -264,7 +264,7 @@ A = 数据充分可信；B = 部分缺失但不影响主结论；C = 缺失较�
 
 ## 输出要求
 
-1. **报告位置**：`reports/{行业名}-funnel-{YYYYMMDD}.md`（行业报告放 reports/ 根目录）
+1. **报告位置**：将行业视为投资标的，从当前仓库根目录计算 `REPORT_DIR="reports/{安全化行业名}"` 和 `REPORT_PATH="$REPORT_DIR/{安全化行业名}-funnel-{YYYYMMDD}.md"`，先执行 `mkdir -p "$REPORT_DIR"`，再写入 `"$REPORT_PATH"`。行业名须将 `/`、`\` 和连续空白替换为 `-`，拒绝空值、绝对路径、`.`、`..` 和目录穿越；不得写入 Home 或 `reports/` 根目录。
 2. **语言**：中文
 3. **风格**：直接、犀利、不说废话
 4. **数据**：所有数据标注来源；估计值标"估计"
@@ -281,14 +281,14 @@ A = 数据充分可信；B = 部分缺失但不影响主结论；C = 缺失较�
 ```bash
 # Step 1 — 提取抽检清单（15% 随机抽样）
 python3 tools/report_audit.py extract \
-  --report <报告文件路径>
+  --report "$REPORT_PATH"
 
 # Step 2 — 对清单每项从可靠信源取数（参见 skills/financial-data.md）
 
 # Step 3 — 输出准出/打回判决
 python3 tools/report_audit.py verdict \
   --results '<填好的JSON>' \
-  --report <报告文件名>
+  --report "$REPORT_PATH"
 ```
 
 **【准出】** 全部通过 → 报告可发布；**【打回】** 有不通过 → 修正后重审。
